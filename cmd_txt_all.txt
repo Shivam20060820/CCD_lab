@@ -1,0 +1,127 @@
+cmd aws commands for accessing bucket using iam user cmd
+required amazon cli
+Microsoft Windows [Version 10.0.26200.8875]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Student>aws configure
+AWS Access Key ID [****************CUOI]: Shivam1981
+AWS Secret Access Key [****************Y8T6]: error mee
+Default region name [ap-south-1]: ap-south-1
+Default output format [yaml]: yaml
+
+C:\Users\Student>aws s3 ls
+
+aws: [ERROR]: An error occurred (InvalidAccessKeyId) when calling the ListBuckets operation: The AWS Access Key Id you provided does not exist in our records.
+
+C:\Users\Student>aws configure list
+NAME       : VALUE                    : TYPE             : LOCATION
+profile    : <not set>                : None             : None
+access_key : ****************1981     : shared-credentials-file :
+secret_key : ****************23*!     : shared-credentials-file :
+region     : ap-south-1               : config-file      : ~/.aws/config
+
+C:\Users\Student>aws configure
+AWS Access Key ID [****************1981]: key id
+AWS Secret Access Key [****************23*!]: clear
+Default region name [ap-south-1]: a
+Default output format [yaml]: fasfasfasfas
+
+C:\Users\Student>aws configure
+AWS Access Key ID [****************XPPR]: Shivam1981
+AWS Secret Access Key [****************lear]: key id
+Default region name [a]: ap-south-1
+Default output format [fasfasfasfas]: yaml
+
+C:\Users\Student>aws s3 ls
+
+aws: [ERROR]: An error occurred (InvalidAccessKeyId) when calling the ListBuckets operation: The AWS Access Key Id you provided does not exist in our records.
+
+C:\Users\Student>aws configure list
+NAME       : VALUE                    : TYPE             : LOCATION
+profile    : <not set>                : None             : None
+access_key : ****************1981     : shared-credentials-file :
+secret_key : ****************XPPR     : shared-credentials-file :
+region     : ap-south-1               : config-file      : ~/.aws/config
+
+C:\Users\Student>aws configure
+main-
+AWS Access Key ID [****************1981]: key id
+AWS Secret Access Key [****************XPPR]: secret access code
+Default region name [ap-south-1]: ap-south-1]
+Default output format [yaml]: yaml
+
+C:\Users\Student>aws s3 ls
+
+aws: [ERROR]: Provided region_name 'ap-south-1]' doesn't match a supported format.
+
+C:\Users\Student>aws configure
+main-
+AWS Access Key ID [****************1981]: key id
+AWS Secret Access Key [****************XPPR]: secret access code
+Default region name [ap-south-1]: ap-south-1
+Default output format [yaml]: yaml
+
+C:\Users\Student>aws s3 ls
+2026-07-27 09:08:11 shivam1981
+
+C:\Users\Student>aws s3 cp "C:\Users\Student\Desktop\shivam.html" s3://cloud-storage-lab/
+upload failed: Desktop\shivam.html to s3://cloud-storage-lab/shivam.html An error occurred (NoSuchBucket) when calling the PutObject operation: The specified bucket does not exist
+
+C:\Users\Student>aws s3 cp "C:\Users\Student\Desktop\shivam.html" s3://shivam1981/
+upload: Desktop\shivam.html to s3://shivam1981/shivam.html
+
+C:\Users\Student>cd desktop
+
+C:\Users\Student\Desktop>mkdir BackupData
+
+C:\Users\Student\Desktop>cd Backupdata
+
+C:\Users\Student\Desktop\BackupData>echo "Cloud Computing Lab" > file1.txt
+
+C:\Users\Student\Desktop\BackupData>echo "Cloud Computing Lab" > file2.txt
+
+C:\Users\Student\Desktop\BackupData>echo "Cloud Computing Lab" > file3.txt
+
+C:\Users\Student\Desktop\BackupData>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Student\Desktop\BackupData>aws s3 cp file1.txt s3://shivam1981/
+upload: .\file1.txt to s3://shivam1981/file1.txt
+
+C:\Users\Student\Desktop\BackupData>aws s3 cp file2.txt s3://shivam1981/
+upload: .\file2.txt to s3://shivam1981/file2.txt
+
+C:\Users\Student\Desktop\BackupData>aws s3 cp file3.txt s3://shivam1981/
+upload: .\file3.txt to s3://shivam1981/file3.txt
+
+C:\Users\Student\Desktop\BackupData>aws s3 ls s3://shivam1981/
+2026-07-27 09:45:05         24 file1.txt
+2026-07-27 09:45:23         24 file2.txt
+2026-07-27 09:45:38         24 file3.txt
+2026-07-27 09:41:48         43 shivam.html
+
+C:\Users\Student\Desktop\BackupData>
+C:\Users\Student\Desktop\BackupData>nano backup.sh
+'nano' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Student\Desktop\BackupData>gedit backup.sh
+'gedit' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Student\Desktop\BackupData>echo "New Backup data">> file1.txt
+
+C:\Users\Student\Desktop\BackupData>./backup.sh
+'.' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Student\Desktop\BackupData>./backup.sh
+'.' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Student\Desktop\BackupData>./backup.ps1
+'.' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Student\Desktop\BackupData>
