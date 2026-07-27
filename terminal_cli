@@ -1,0 +1,61 @@
+terminal cli
+
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\Student> cd Desktop
+PS C:\Users\Student\Desktop> cd BackupData
+PS C:\Users\Student\Desktop\BackupData> backup.ps1
+backup.ps1 : The term 'backup.ps1' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ backup.ps1
++ ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (backup.ps1:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Student\Desktop\BackupData> echo "New Backup data">> file1.txt
+PS C:\Users\Student\Desktop\BackupData> aws s3 sync BackupData s3://shivam1981
+
+aws: [ERROR]: The user-provided path BackupData does not exist.
+PS C:\Users\Student\Desktop\BackupData> cd --
+PS C:\Users\Student\Desktop\BackupData> cd..
+PS C:\Users\Student\Desktop> aws s3 sync BackupData s3://shivam1981
+upload: BackupData\backup.ps1.txt to s3://shivam1981/backup.ps1.txt
+upload: BackupData\file1.txt to s3://shivam1981/file1.txt
+PS C:\Users\Student\Desktop> backup.ps1
+backup.ps1 : The term 'backup.ps1' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ backup.ps1
++ ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (backup.ps1:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Student\Desktop> cd BackupData
+PS C:\Users\Student\Desktop\BackupData> backup.ps1
+backup.ps1 : The term 'backup.ps1' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ backup.ps1
++ ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (backup.ps1:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Student\Desktop\BackupData> .\backup.ps1
+.\backup.ps1 : The term '.\backup.ps1' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ .\backup.ps1
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (.\backup.ps1:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\Student\Desktop\BackupData> aws s3 sync BackupData s3://shivam1981
+
+aws: [ERROR]: The user-provided path BackupData does not exist.
+PS C:\Users\Student\Desktop\BackupData> cd..
+PS C:\Users\Student\Desktop> aws s3 sync BackupData s3://shivam1981
+PS C:\Users\Student\Desktop>
